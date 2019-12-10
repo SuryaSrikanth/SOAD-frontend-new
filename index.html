@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>SOAD Project Problems</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <link rel="stylesheet" href="styles.css" />
+  <script src="three.r95.min.js"></script>
+  <script src="vanta.fog.min.js"></script>
+</head>
+
+<body>
+  <div class="main-title">
+    My solutions to problems encountered for SOAD Project.
+  </div>
+  <hr><br>
+
+  <div class="main-body">
+    <div>
+      <h4> Problem 1</h4>
+      <p class="para">
+        Display an image on the browser without uploading the image. <br>
+        This is done by using filereaders to read the image file and display it on the page. Function runs everytime
+        there is a change in the input field.
+      </p><br />
+    </div>
+    <div class="file-field input-field">
+      <div class="btn teal darken-1"><span>Select Image</span>
+        <input type="file" name="UploadPic" id="pic" accept="Image/*" />
+      </div>
+      <div class="file-path-wrapper">
+        <input type="text" class="file-path validate">
+      </div>
+    </div>
+    <br />
+
+    <img src="#" id="disp" style="width: 200px;display: none;" />
+    <br />
+    <hr>
+    <hr>
+    <div>
+      <h4> Problem 2</h4>
+      <p class="para">
+        HTML Canvas on a button element.<br>
+        Make a transparent button with its display as block and overflow hidden. Make a canvas inside it.
+      </p><br />
+    </div>
+    <span id="loginbtn">
+      <span>
+        <button id="login"><span>Login</span></button>
+      </span>
+    </span>
+    <br />
+    <div id="btncounter"></div><br><br>
+    <hr>
+    <hr><br><br>
+    <div>
+      <h4>Problem 3</h4><br>
+      <p class="para">Make a file with given text and make it downloadable</p>
+      <div id="download-container">
+        <span id="downbtn">
+          <textarea id="txtarea" name='txtfile' rows="5" cols="70">Write Something here</textarea>
+          <br>
+          <span>
+            <button class="btn waves" id="downbtnclk"><span>Make File</span></button>
+          </span>
+          <span>
+              <a class="btn red lighten-2" id="downfile" ><span>Download File</span></a>
+            </span>
+        </span>
+
+
+      </div><br><br>
+      <hr>
+      <hr><br><br>
+
+      <div>
+        <h4>Problem 4</h4><br>
+        <p class="para">Particle system animation. made from scratch, shows a loading animation of making an image from 2 other images.<br> Image credits: Zalando website.</p>
+        <script src="./loadinganim.js"></script>
+        <canvas id="canvas" width="1500px" height="600" style="margin-left: 0;"></canvas>
+
+    <button onclick="main()" class="btn orange">run animation</button>
+    <button onclick="mainloaded()" class="btn orange">stop animation</button>
+    <button onclick="maininitial()" class="btn orange">initial state</button>
+    <button onclick="updateimage()" class="btn orange">change image</button>
+    <script>main()</script>
+    
+    <img src="./dress.jpg" id="imgchik" alt="" srcset="" style="display: none;" />
+    <img src="./dress.jpg" id="imgchik2" alt="" srcset="" style="display: none;" />
+    <img src="./dress.jpg" id="imgchik3" alt="" srcset="" style="display: none;" />
+        <hr>
+        <hr>
+
+      <div>
+        <h4> Problem 5</h4>
+        <p class="para">
+          CSV file to a table.<br>
+          Read the file as a text document, iterate over the characters and insert tags at comma or new line character.
+        </p><br />
+      </div>
+      <div>
+        <div class="file-field input-field">
+          <div class="btn teal darken-1"><span>Select CSV File</span>
+            <input type="file" name="CSV" id="CSV" accept=".csv" /></div>
+          <div class="file-path-wrapper">
+            <input type="text" class="file-path validate">
+          </div>
+
+        </div>
+        <div id="csvdata"></div>
+      </div>
+      <script src="./source.js"></script>
+</body>
+
+
+
+</html>
